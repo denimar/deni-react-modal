@@ -83,7 +83,7 @@ var config = {
     compress: true,
     port: DEV_SERVER_PORT,
     open: true
-  }
+  }  
 };
 
 module.exports = config;

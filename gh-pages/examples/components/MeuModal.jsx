@@ -29,11 +29,11 @@ class MeuModal extends DeniReactModal {
       listeners: {
         onShow: (modalBody) => {
           console.log(modalBody);
-          alert('onshow');
+          //alert('onshow');
         },
         onClose: (modalBody) => {
           console.log(modalBody);
-          alert('onclose');
+          //alert('onclose');
         }
       }
     }
@@ -45,7 +45,7 @@ class MeuModal extends DeniReactModal {
         <fieldset>
           <legend>Informações do Usuário</legend>
           <label for="name">Nome:</label>
-          <input type="text" name="name" autofocus />
+          <input type="text" name="name" autoFocus />
           <br />
           <label for="mail">E-mail:</label>
           <input type="email" name="mail" size="40" />
