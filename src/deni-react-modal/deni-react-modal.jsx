@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDom from 'react-dom'
+import ReactDOM from 'react-dom'
 import './deni-react-modal.scss'
 import Constant from '../Constant';
 import DeniReactModalHelper from './deni-react-modal.helper'
