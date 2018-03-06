@@ -1483,7 +1483,7 @@ var DeniReactModal = function () {
         document.body.appendChild(_this.backgroundWnd);
 
         //
-        ReactDOM.render(_this.renderAll(), _this.backgroundWnd);
+        _reactDom2.default.render(_this.renderAll(), _this.backgroundWnd);
 
         //
         _this.modalContainer = _this.backgroundWnd.querySelector('.deni-react-modal-container');
