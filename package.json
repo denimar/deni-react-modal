@@ -1,9 +1,9 @@
 {
-  "name": "deni-react-popup-menu",
-  "version": "0.0.2",
+  "name": "deni-react-modal",
+  "version": "0.0.1",
   "author": "Denimar de Moraes <denimar@gmail.com>",
-  "description": "A simple but useful popup menu for React.",
-  "main": "build/deni-react-popup-menu.js",
+  "description": "A cool way to show a modal using React.",
+  "main": "build/deni-react-modal.js",
   "directories": {
     "build": "build"
   },
@@ -15,7 +15,7 @@
     "lint": "eslint src"
   },
   "license": "MIT",
-  "homepage": "http://github.com/",
+  "homepage": "https://github.com/denimar/deni-react-modal",
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "babel": "^6.23.0",
