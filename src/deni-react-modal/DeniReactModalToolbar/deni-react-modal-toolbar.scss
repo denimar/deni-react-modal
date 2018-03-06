@@ -1,0 +1,37 @@
+@import '../../_variable.scss';
+
+.deni-react-modal-toolbar-container {
+  border-top: solid 1px darken($deni-react-modal-base-color, 7);
+  background-color: darken($deni-react-modal-base-color, 3);
+  //box-shadow: 0px -2px 2px darken($deni-react-modal-base-color, 3);
+  display: block;
+  height: 38px;
+  padding: 6px 3px 6px 6px;
+  font-family: arial,sans-serif,tahoma;
+  font-size: 14px;
+
+  .deni-react-modal-toolbar {
+
+    .modal-toolbar-button {
+      background-color: darken($deni-react-modal-base-color, 2);
+      border: solid 1px darken($deni-react-modal-base-color, 10);
+      border-radius: 3px;
+      color: darken($deni-react-modal-base-color, 55);
+      cursor: pointer;
+      float: right;
+      height: 26px;
+      margin-right: 3px;
+      min-width: 80px;
+      padding-top: 3px;
+      text-align: center;
+
+      &:hover {
+        background-color: darken($deni-react-modal-base-color, 4);
+        border-color: darken($deni-react-modal-base-color, 18);
+        box-shadow: -2px -2px 2px darken($deni-react-modal-base-color, 3), 2px 2px 2px darken($deni-react-modal-base-color, 3);
+      }
+    }
+
+  }
+
+}
