@@ -1,3 +1,4 @@
+import React from 'react'
 import { DeniReactModal } from '../../../src/deni-react-modal/deni-react-modal'
 
 class SimpleModal extends DeniReactModal {
