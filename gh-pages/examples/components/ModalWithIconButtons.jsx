@@ -19,7 +19,7 @@ class ModalWithIconButtons extends DeniReactModal {
 
   getConfig() {
     return {
-      title: 'Modal with auxiliar buttons',
+      title: 'Modal Example',
       width: '650px',
       buttons: [
         {

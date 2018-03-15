@@ -15,7 +15,7 @@ var YOUR_APPLICATIONS_NAME = 'deni-react-modal';
 var APPLICATION_BASEPATH = GHPAGES_DIR + '/examples';
 
 // Modify this to change the dev server port.
-var DEV_SERVER_PORT = '3008';
+var DEV_SERVER_PORT = '3009';
 
 var devtools = '';
 var plugins = [];
@@ -30,6 +30,8 @@ plugins.push(new ExtractTextPlugin({
   filename: './css/' + outputCssFile,
   allChunks: true
 }));
+
+var implementingIndexHTML = true; //true;   //true=implementing index.html, false=implementing examples/...
 
 var config = {
   entry: [
@@ -79,11 +81,12 @@ var config = {
   devtool: devtools,
   plugins: plugins,
   devServer: {
-    contentBase: GHPAGES_DIR,
+    contentBase: implementingIndexHTML ? GHPAGES_DIR : APPLICATION_BASEPATH,
+    //contentBase: GHPAGES_DIR,
     compress: true,
     port: DEV_SERVER_PORT,
     open: true,
-    openPage: 'examples/index.html'
+    //openPage: ''
   }
 };
 
