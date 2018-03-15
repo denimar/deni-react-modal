@@ -79,10 +79,11 @@ var config = {
   devtool: devtools,
   plugins: plugins,
   devServer: {
-    contentBase: APPLICATION_BASEPATH,
+    contentBase: GHPAGES_DIR,
     compress: true,
     port: DEV_SERVER_PORT,
-    open: true
+    open: true,
+    openPage: 'examples/index.html'
   }
 };
 
