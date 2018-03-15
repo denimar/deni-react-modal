@@ -22,7 +22,11 @@ class DeniReactModal {
   }
 
   getConfig() {
-    return {}
+    return {} //inplemented by children classes
+  }
+
+  confirm(modalBody, button) {
+    return true; //inplemented by children classes
   }
 
   show() {

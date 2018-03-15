@@ -1,18 +1,45 @@
 import React from 'react'
 import './Examples.scss'
-import MeuModal from './MeuModal'
+
+import SimpleModal from './SimpleModal'
+import ModalWithEvents from './ModalWithEvents'
+import ModalWithAuxiliarButtons from './ModalWithAuxiliarButtons'
+import ModalWithIconButtons from './ModalWithIconButtons'
 
 class Examples extends React.Component {
 
-  handleButtonClick() {
-    let meuModal = new MeuModal();
-    meuModal.show();
+  simpleModalClick() {
+    let modal = new SimpleModal();
+    modal.show();
   }
+
+  modalWithEventsButtonClick() {
+    let modal = new ModalWithEvents();
+    modal.show();
+  }
+
+  modalWithAuxiliarButtonClick() {
+    let modal = new ModalWithAuxiliarButtons();
+    modal.show();
+  }
+
+  modalWithIconButtonClick() {
+    let modal = new ModalWithIconButtons();
+    modal.show();
+  }
+
 
   render() {
     return (
-      <div>
-        <button onClick={ this.handleButtonClick.bind(this) } >teste</button>
+      <div className="examples-container">
+        <fieldset>
+          <legend>Click on the buttons below to see the demos</legend>
+
+          <button onClick={ this.simpleModalClick.bind(this) } >Simple Modal</button>
+          <button onClick={ this.modalWithEventsButtonClick.bind(this) } >Modal with events</button>
+          <button onClick={ this.modalWithAuxiliarButtonClick.bind(this) } >Modal with auxiliar buttons</button>
+          <button onClick={ this.modalWithIconButtonClick.bind(this) } >Modal with icon buttons</button>
+        </fieldset>
       </div>
     )
 

@@ -15,6 +15,13 @@
     "lint": "eslint src"
   },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/denimar/deni-react-modal"
+  },
+  "bugs": {
+    "url": "https://github.com/denimar/deni-react-modal/issues"
+  },
   "homepage": "https://github.com/denimar/deni-react-modal",
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -50,7 +57,7 @@
   },
   "dependencies": {
     "create-react-class": "^15.6.2",
-    "react-icons": "^2.2.7",
+    "font-awesome": "^4.7.0",
     "react-syntax-highlighter": "^6.1.1"
   }
 }

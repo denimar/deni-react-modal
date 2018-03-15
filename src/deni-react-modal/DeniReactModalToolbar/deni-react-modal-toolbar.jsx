@@ -28,17 +28,6 @@ class DeniReactModalToolbar extends React.Component {
   //
   _normalizeButtons(buttonsProp) {
     return buttonsProp;
-
-    // let buttonsArray = buttonsProp || [Constant.BUTTON.CLOSE];
-    // //
-    // if (typeof buttonsArray === 'number') {
-    //   buttonsArray = [buttonsArray];
-    // //
-    // } else if (!(buttonsArray instanceof Array)) {
-    //   throw new Error('Property "buttons" must be passed as a Integer or an Array of Integer.');
-    // }
-    //
-    // return buttonsArray;
   }
 
   _createButtonsElements(modal, buttons) {
@@ -48,8 +37,15 @@ class DeniReactModalToolbar extends React.Component {
        //I had to reverse the buttons array because "float: right" property in css
        buttons.reverse().forEach(button => {
          let buttonElm = document.createElement('div');
-         buttonElm.innerText = button.text;
-         buttonElm.classList.add('modal-toolbar-button');
+
+         if (button.icon) {
+           buttonElm.innerHTML = button.icon;
+           buttonElm.classList.add('modal-toolbar-button-icon');
+         } else {
+           buttonElm.innerText = button.text;
+           buttonElm.classList.add('modal-toolbar-button');
+         }
+
          buttonElm.setAttribute('value', button.value);
          if (button.style) {
            Object.assign(buttonElm.style, button.style);
@@ -59,7 +55,9 @@ class DeniReactModalToolbar extends React.Component {
          }
          buttonElm.addEventListener('click', () => {
            if (this._isDefaultButton(button)) {
-             modal.close({modalBody: modal.modalContainer, button: parseInt(event.target.getAttribute('value'))});
+             if (modal.confirm(modal.modalContainer, button)) {
+               modal.close({modalBody: modal.modalContainer, button: parseInt(event.target.getAttribute('value'))});
+             }
            } else {
              if (button.onClick) {
                button.onClick(button, modal.modalContainer);

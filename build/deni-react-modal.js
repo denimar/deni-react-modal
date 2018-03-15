@@ -1543,7 +1543,12 @@ var DeniReactModal = function () {
   }, {
     key: 'getConfig',
     value: function getConfig() {
-      return {};
+      return {}; //inplemented by children classes
+    }
+  }, {
+    key: 'confirm',
+    value: function confirm(modalBody, button) {
+      return true; //inplemented by children classes
     }
   }, {
     key: 'show',
@@ -19565,17 +19570,6 @@ var DeniReactModalToolbar = function (_React$Component) {
     key: '_normalizeButtons',
     value: function _normalizeButtons(buttonsProp) {
       return buttonsProp;
-
-      // let buttonsArray = buttonsProp || [Constant.BUTTON.CLOSE];
-      // //
-      // if (typeof buttonsArray === 'number') {
-      //   buttonsArray = [buttonsArray];
-      // //
-      // } else if (!(buttonsArray instanceof Array)) {
-      //   throw new Error('Property "buttons" must be passed as a Integer or an Array of Integer.');
-      // }
-      //
-      // return buttonsArray;
     }
   }, {
     key: '_createButtonsElements',
@@ -19588,8 +19582,15 @@ var DeniReactModalToolbar = function (_React$Component) {
         //I had to reverse the buttons array because "float: right" property in css
         buttons.reverse().forEach(function (button) {
           var buttonElm = document.createElement('div');
-          buttonElm.innerText = button.text;
-          buttonElm.classList.add('modal-toolbar-button');
+
+          if (button.icon) {
+            buttonElm.innerHTML = button.icon;
+            buttonElm.classList.add('modal-toolbar-button-icon');
+          } else {
+            buttonElm.innerText = button.text;
+            buttonElm.classList.add('modal-toolbar-button');
+          }
+
           buttonElm.setAttribute('value', button.value);
           if (button.style) {
             Object.assign(buttonElm.style, button.style);
@@ -19599,7 +19600,9 @@ var DeniReactModalToolbar = function (_React$Component) {
           }
           buttonElm.addEventListener('click', function () {
             if (_this3._isDefaultButton(button)) {
-              modal.close({ modalBody: modal.modalContainer, button: parseInt(event.target.getAttribute('value')) });
+              if (modal.confirm(modal.modalContainer, button)) {
+                modal.close({ modalBody: modal.modalContainer, button: parseInt(event.target.getAttribute('value')) });
+              }
             } else {
               if (button.onClick) {
                 button.onClick(button, modal.modalContainer);
@@ -19670,7 +19673,7 @@ exports = module.exports = __webpack_require__(5)(false);
 
 
 // module
-exports.push([module.i, ".noselect {\n  -webkit-touch-callout: none;\n  /* iOS Safari */\n  -webkit-user-select: none;\n  /* Safari */\n  -khtml-user-select: none;\n  /* Konqueror HTML */\n  -moz-user-select: none;\n  /* Firefox */\n  -ms-user-select: none;\n  /* Internet Explorer/Edge */\n  user-select: none;\n  /* Non-prefixed version, currently supported by Chrome and Opera */ }\n\n.deni-react-modal-toolbar-container {\n  border-top: solid 1px #cae6f0;\n  background-color: #daedf5;\n  display: block;\n  height: 38px;\n  padding: 6px 3px 6px 6px;\n  font-family: arial,sans-serif,tahoma;\n  font-size: 14px; }\n  .deni-react-modal-toolbar-container .deni-react-modal-toolbar .modal-toolbar-button {\n    background-color: #deeff6;\n    border: solid 1px #bee0ed;\n    border-radius: 3px;\n    color: #2b7b9a;\n    cursor: pointer;\n    float: right;\n    height: 26px;\n    margin-right: 3px;\n    min-width: 80px;\n    padding-top: 3px;\n    text-align: center; }\n    .deni-react-modal-toolbar-container .deni-react-modal-toolbar .modal-toolbar-button:hover {\n      background-color: #d6ebf4;\n      border-color: #9ed1e4;\n      box-shadow: -2px -2px 2px #daedf5, 2px 2px 2px #daedf5; }\n", ""]);
+exports.push([module.i, ".noselect {\n  -webkit-touch-callout: none;\n  /* iOS Safari */\n  -webkit-user-select: none;\n  /* Safari */\n  -khtml-user-select: none;\n  /* Konqueror HTML */\n  -moz-user-select: none;\n  /* Firefox */\n  -ms-user-select: none;\n  /* Internet Explorer/Edge */\n  user-select: none;\n  /* Non-prefixed version, currently supported by Chrome and Opera */ }\n\n.deni-react-modal-toolbar-container {\n  border-top: solid 1px #cae6f0;\n  background-color: #daedf5;\n  display: block;\n  height: 38px;\n  padding: 6px 3px 6px 6px;\n  font-family: arial,sans-serif,tahoma;\n  font-size: 14px; }\n  .deni-react-modal-toolbar-container .deni-react-modal-toolbar .modal-toolbar-button {\n    background-color: #deeff6;\n    border: solid 1px #bee0ed;\n    border-radius: 3px;\n    color: #2b7b9a;\n    cursor: pointer;\n    float: right;\n    height: 26px;\n    margin-right: 3px;\n    min-width: 80px;\n    padding-top: 3px;\n    text-align: center; }\n    .deni-react-modal-toolbar-container .deni-react-modal-toolbar .modal-toolbar-button:hover {\n      background-color: #d6ebf4;\n      border-color: #9ed1e4;\n      box-shadow: -2px -2px 2px #daedf5, 2px 2px 2px #daedf5; }\n  .deni-react-modal-toolbar-container .deni-react-modal-toolbar .modal-toolbar-button-icon {\n    margin-left: 2px;\n    margin-right: 1px;\n    border: solid 1px #cee8f1;\n    border-radius: 3px;\n    cursor: pointer;\n    padding: 3px;\n    display: flex;\n    align-items: center;\n    text-align: center;\n    color: #538cc6; }\n    .deni-react-modal-toolbar-container .deni-react-modal-toolbar .modal-toolbar-button-icon:hover {\n      background-color: #cae6f0;\n      border-color: #b6dceb;\n      box-shadow: -2px -2px 2px #daedf5, 2px 2px 2px #daedf5;\n      color: #3366cc; }\n", ""]);
 
 // exports
 
