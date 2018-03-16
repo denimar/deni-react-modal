@@ -1,6 +1,6 @@
 {
   "name": "deni-react-modal",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "author": "Denimar de Moraes <denimar@gmail.com>",
   "description": "A cool way to show a modal using React.",
   "main": "build/deni-react-modal.js",
