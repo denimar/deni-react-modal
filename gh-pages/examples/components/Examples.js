@@ -32,6 +32,8 @@ class Examples extends React.Component {
   render() {
     return (
       <div className="examples-container">
+        <h1>deni-react-modal - Demo</h1>
+        <br />
         <fieldset>
           <legend>Click on the buttons below to see the demos</legend>
 

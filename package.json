@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --config webpack/webpack.config.js",
+    "ghpages": "./node_modules/.bin/webpack --config webpack/webpack.config.ghpages.js",    
     "build": "./node_modules/.bin/webpack --config webpack/webpack.config.prod.js",
     "lint": "eslint src"
   },
