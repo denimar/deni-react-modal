@@ -14,7 +14,9 @@ module.exports = {
   entry: SOURCE_FOLDER + '/deni-react-modal/deni-react-modal.jsx',
   output: {
     path: BUILD_FOLDER,
-    filename: 'deni-react-modal.js'
+    filename: 'deni-react-modal.js',
+    library: 'DeniReactModal',
+    libraryTarget: 'umd'
   },
   module: {
     rules: loaders
