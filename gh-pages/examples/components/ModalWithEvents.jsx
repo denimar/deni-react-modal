@@ -1,3 +1,4 @@
+import React from 'react'
 import { DeniReactModal, Button, Position } from '../../../src/deni-react-modal/deni-react-modal'
 
 class ModalWithEvents extends DeniReactModal {
