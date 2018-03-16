@@ -5,7 +5,7 @@ A cool way to show a modal using React
 
 # Usage
 
-#### Extend from DeniReactModal like this:
+#### Create your modal by extending from DeniReactModal like this:
 ```javascript
 
 import { DeniReactModal } from 'deni-react-modal'
