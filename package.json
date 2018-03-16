@@ -58,7 +58,6 @@
   "dependencies": {
     "create-react-class": "^15.6.2",
     "font-awesome": "^4.7.0",
-    "react-router-dom": "^4.2.2",
     "react-syntax-highlighter": "^6.1.1"
   }
 }
