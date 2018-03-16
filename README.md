@@ -4,6 +4,9 @@ A cool way to show a modal using React
 [examples](https://denimar.github.io/deni-react-modal/)
 
 
+# Usage
+
+## Extend from DeniReactModal like this:
 ```javascript
 
 import { DeniReactModal } from 'deni-react-modal'
@@ -31,6 +34,16 @@ export default SimpleModal;
 
 ```
 
+## ...and then call that class like this:
+
+```javascript
+
+import SimpleModal from './SimpleModal'
+....
+let modal = new SimpleModal();
+modal.show();
+
+```
 
 ## Author
 
