@@ -2,8 +2,7 @@
 
 .deni-react-modal-title-container {
   align-items: center;
-  background-color: darken($deni-react-modal-base-color, 10);//#FFFFFF;
-  border-bottom: solid 1px darken($deni-react-modal-base-color, 5);
+  border-bottom: solid 1px;
   border-top-left-radius: $modal-border-radius;
   border-top-right-radius: $modal-border-radius;
   color: white; //darken($deni-react-modal-base-color, 50);

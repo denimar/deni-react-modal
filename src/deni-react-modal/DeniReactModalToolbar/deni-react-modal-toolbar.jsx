@@ -13,7 +13,7 @@ class DeniReactModalToolbar extends React.Component {
         ref={elem => {
           this.element = elem
         }}
-        className="deni-react-modal-toolbar-container noselect theme-red"
+        className="deni-react-modal-toolbar-container noselect"
       >
         <div className="deni-react-modal-toolbar">
           {

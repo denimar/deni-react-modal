@@ -1,11 +1,9 @@
 @import '../../themes/index.scss';
 
 .deni-react-modal-body-container {
-  background-color: lighten($deni-react-modal-base-color, 20);
-  border: solid 1px lighten($deni-react-modal-base-color, 4); 
+  border: solid 1px #ffffff;
+  outline: solid 2px;
   border-radius: 2px;
-  color: darken($deni-react-modal-base-color, 35);
-  box-shadow: 1px 1px 1px #f2f2f2;
   justify-content: space-around;
   flex: 1;
   font-family: arial,sans-serif,tahoma;
@@ -16,7 +14,7 @@
   fieldset {
     padding: 15px;
     font-size: 12px;
-    border: solid 1px lighten($deni-react-modal-base-color, 8);
+    border: solid 1px;
   }
 
   label {
@@ -31,7 +29,6 @@
 
   legend {
     padding: 2px 8px;
-    color: darken($deni-react-modal-base-color, 27);
     font-size: 11px;
     width: auto !important;
     margin-bottom: auto;
@@ -41,16 +38,14 @@
   input:not([type="button"]) {
     margin-bottom: 4px;
     font-size: 14px;
-    color: #404040;
     padding: 4px;
 
     outline: none;
-    border: 1px solid lighten($deni-react-modal-base-color, 6);
+    border: 1px solid;
     transition: all 0.30s ease-in-out;
 
     &:focus {
-      box-shadow: 0 0 10px darken($deni-react-modal-base-color, 1);
-      border: 1px solid darken($deni-react-modal-base-color, 2);
+      border: 1px solid;
     }
   }
 

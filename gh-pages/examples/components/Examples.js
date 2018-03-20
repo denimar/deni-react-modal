@@ -34,6 +34,19 @@ class Examples extends React.Component {
       <div className="examples-container">
         <h1>deni-react-modal - Demo</h1>
         <br />
+
+        <div>
+          <label>Theme</label>
+          <select>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </select>
+        </div>
+
+        <br />
+
         <fieldset>
           <legend>Click on the buttons below to see the demos</legend>
 

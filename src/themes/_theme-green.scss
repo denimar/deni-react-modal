@@ -1,0 +1,80 @@
+@import '../_variable.scss';
+
+.deni-react-modal-container.theme-green {
+  $deni-react-modal-base-color: $theme-green;
+  border: 1px solid lighten($deni-react-modal-base-color, 1);
+
+  .deni-react-modal {
+    background-color: lighten($deni-react-modal-base-color, 10);
+
+    .deni-react-modal-title-container {
+      background-color: darken($deni-react-modal-base-color, 10);//#FFFFFF;
+      border-bottom-color: darken($deni-react-modal-base-color, 5);
+    }
+
+    .deni-react-modal-body-container {
+      background-color: lighten($deni-react-modal-base-color, 20);
+      box-shadow: 1px 1px 1px lighten($deni-react-modal-base-color, 4);
+      color: darken($deni-react-modal-base-color, 35);
+      outline-color: lighten($deni-react-modal-base-color, 7);
+
+      fieldset {
+        border-color: lighten($deni-react-modal-base-color, 8);
+      }
+
+      legend {
+        color: darken($deni-react-modal-base-color, 27);
+      }
+
+      input:not([type="button"]) {
+        color: #404040;
+        border-color: lighten($deni-react-modal-base-color, 6);
+
+        &:focus {
+          box-shadow: 0 0 10px darken($deni-react-modal-base-color, 1);
+          border-color: darken($deni-react-modal-base-color, 2);
+        }
+      }
+
+    }
+
+    .deni-react-modal-toolbar-container {
+      $deni-react-modal-toolbar-background: lighten($deni-react-modal-base-color, 9);
+      $deni-react-modal-toolbar-hover-background: lighten($deni-react-modal-base-color, 4);
+      border-top-color: darken($deni-react-modal-toolbar-background, 4) !important;
+      background-color: $deni-react-modal-toolbar-background;
+
+      .deni-react-modal-toolbar {
+
+        .modal-toolbar-button {
+          background-color: lighten($deni-react-modal-toolbar-background, 7);
+          border-color: darken($deni-react-modal-toolbar-background, 8);
+          color: darken($deni-react-modal-base-color, 55);
+
+          &:hover {
+            background-color: lighten($deni-react-modal-toolbar-background, 3);
+            border-color: darken($deni-react-modal-toolbar-background, 6);
+            box-shadow: -2px -2px 2px darken($deni-react-modal-toolbar-background, 3), 2px 2px 2px darken($deni-react-modal-toolbar-background, 3);
+          }
+        }
+
+        .modal-toolbar-button-icon {
+          border-color: darken($deni-react-modal-toolbar-background, 1);
+          color: darken($deni-react-modal-toolbar-background, 24);
+
+          &:hover {
+            background-color: lighten($deni-react-modal-toolbar-hover-background, 3);
+            border-color: lighten($deni-react-modal-toolbar-background, 2);
+            box-shadow: -2px -2px 2px lighten($deni-react-modal-base-color, 3), 2px 2px 2px lighten($deni-react-modal-base-color, 3);
+            color: darken($deni-react-modal-toolbar-background, 46);
+          }
+        }
+
+      }
+
+
+
+    }
+
+  }
+}
