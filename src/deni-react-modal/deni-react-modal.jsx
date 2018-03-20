@@ -71,8 +71,8 @@ class DeniReactModal {
 
   renderAll() {
     return (
-      <div className="deni-react-modal-container">
-        <div className="deni-react-modal">
+      <div className="deni-react-modal-container theme-red">
+        <div className="deni-react-modal theme-red">
           <DeniReactModalTitle title={ this.config.title } modal={ this } />
           <DeniReactModalBody renderFn={ this.render.bind(this) } />
           <DeniReactModalToolbar modal={ this } buttons={ this.config.buttons } />

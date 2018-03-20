@@ -1,7 +1,27 @@
-//$wplex-dialog-base-color: #cce6cc; //green
-$deni-react-modal-base-color: #E6F3F8; //#D9E5F3; //blue
+$theme-default: #007bff; //#afd8e9;
+$theme-red: #EF9A9A;
+$theme-pink: #F48FB1;
+$theme-purple: #CE93D8;
+$theme-deep-purple: #B39DDB;
+$theme-indigo: #9FA8DA;
+$theme-blue: #90CAF9;
+$theme-light-blue: #81D4FA;
+$theme-cyan: #80DEEA;
+$theme-teal: #80CBC4;
+$theme-green: #A5D6A7;
+$theme-light-green: #C5E1A5;
+$theme-lime: #E6EE9C;
+$theme-yellow: #FFF59D;
+$theme-amber: #FFE082;
+$theme-orange: #FFCC80;
+$theme-deep-orange: #FFAB91;
+$theme-brown: #BCAAA4;
+$theme-grey: #BDBDBD;
+$theme-blue-grey: #90A4AE;
+
 $modal-border-radius: 8px;
-//$wplex-dialog-base-color: #d9d9d9; //gray
+
+$deni-react-modal-base-color: $theme-default;
 
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */

@@ -1,0 +1,9 @@
+@import '../_variable.scss';
+
+.deni-react-modal-container.theme-default {
+  $deni-react-modal-base-color: $theme-default;
+
+  .deni-react-modal-toolbar-container.theme-default {
+    $deni-react-modal-base-color: $theme-default;
+  }
+}

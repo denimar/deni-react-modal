@@ -1,8 +1,8 @@
-@import '../../_variable.scss';
+@import '../../themes/index.scss';
 
 .deni-react-modal-title-container {
   align-items: center;
-  background-color: darken($deni-react-modal-base-color, 25);//#FFFFFF;
+  background-color: darken($deni-react-modal-base-color, 10);//#FFFFFF;
   border-bottom: solid 1px darken($deni-react-modal-base-color, 5);
   border-top-left-radius: $modal-border-radius;
   border-top-right-radius: $modal-border-radius;

@@ -1,8 +1,11 @@
-@import '../../_variable.scss';
+@import '../../themes/index.scss';
 
 .deni-react-modal-toolbar-container {
-  border-top: solid 1px darken($deni-react-modal-base-color, 7);
-  background-color: darken($deni-react-modal-base-color, 3);
+  $deni-react-modal-toolbar-background: lighten($deni-react-modal-base-color, 9);
+  $deni-react-modal-toolbar-hover-background: lighten($deni-react-modal-base-color, 4);
+
+  border-top: solid 1px darken($deni-react-modal-toolbar-background, 4);
+  background-color: $deni-react-modal-toolbar-background;
   //box-shadow: 0px -2px 2px darken($deni-react-modal-base-color, 3);
   display: block;
   height: 38px;
@@ -13,8 +16,8 @@
   .deni-react-modal-toolbar {
 
     .modal-toolbar-button {
-      background-color: darken($deni-react-modal-base-color, 2);
-      border: solid 1px darken($deni-react-modal-base-color, 10);
+      background-color: lighten($deni-react-modal-toolbar-background, 7);
+      border: solid 1px darken($deni-react-modal-toolbar-background, 8);
       border-radius: 3px;
       color: darken($deni-react-modal-base-color, 55);
       cursor: pointer;
@@ -26,29 +29,29 @@
       text-align: center;
 
       &:hover {
-        background-color: darken($deni-react-modal-base-color, 4);
-        border-color: darken($deni-react-modal-base-color, 18);
-        box-shadow: -2px -2px 2px darken($deni-react-modal-base-color, 3), 2px 2px 2px darken($deni-react-modal-base-color, 3);
+        background-color: lighten($deni-react-modal-toolbar-background, 3);
+        border-color: darken($deni-react-modal-toolbar-background, 6);
+        box-shadow: -2px -2px 2px darken($deni-react-modal-toolbar-background, 3), 2px 2px 2px darken($deni-react-modal-toolbar-background, 3);
       }
     }
 
     .modal-toolbar-button-icon {
       margin-left: 2px;
       margin-right: 1px;
-      border: solid 1px darken($deni-react-modal-base-color, 6);
-      border-radius: 3px;
+      border: solid 1px darken($deni-react-modal-toolbar-background, 1);
+      border-radius: 4px;
       cursor: pointer;
       padding: 3px;
       display: flex;
       align-items: center;
       text-align: center;
-      color: #538cc6;
+      color: darken($deni-react-modal-toolbar-background, 24);
 
       &:hover {
-        background-color: darken($deni-react-modal-base-color, 7);
-        border-color: darken($deni-react-modal-base-color, 12);
-        box-shadow: -2px -2px 2px darken($deni-react-modal-base-color, 3), 2px 2px 2px darken($deni-react-modal-base-color, 3);
-        color: #3366cc;
+        background-color: lighten($deni-react-modal-toolbar-hover-background, 3);
+        border-color: lighten($deni-react-modal-toolbar-background, 2);
+        box-shadow: -2px -2px 2px lighten($deni-react-modal-base-color, 3), 2px 2px 2px lighten($deni-react-modal-base-color, 3);
+        color: darken($deni-react-modal-toolbar-background, 46);
       }
     }
 
