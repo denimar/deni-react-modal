@@ -29,7 +29,7 @@ class DeniReactModal {
     return true; //inplemented by children classes
   }
 
-  show() {
+  show(theme) {
     this.config = Object.assign({}, this.getDefaultConfig(), this.getConfig());
 
     return new Promise((resolve, reject) => {
@@ -39,7 +39,7 @@ class DeniReactModal {
       document.body.appendChild(this.backgroundWnd);
 
       //
-      ReactDOM.render(this.renderAll(), this.backgroundWnd);
+      ReactDOM.render(this.renderAll(theme), this.backgroundWnd);
 
       //
       this.modalContainer = this.backgroundWnd.querySelector('.deni-react-modal-container');
@@ -69,9 +69,9 @@ class DeniReactModal {
     }
   }
 
-  renderAll() {
+  renderAll(theme) {
     return (
-      <div className="deni-react-modal-container">
+      <div className={ 'deni-react-modal-container' + (theme ? ' ' + theme : '') }>
         <div className="deni-react-modal">
           <DeniReactModalTitle title={ this.config.title } modal={ this } />
           <DeniReactModalBody renderFn={ this.render.bind(this) } />

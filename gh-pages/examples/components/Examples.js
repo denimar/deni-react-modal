@@ -1,6 +1,6 @@
 import React from 'react'
 import './Examples.scss'
-
+import themesJson from './themes.json'
 import SimpleModal from './SimpleModal'
 import ModalWithEvents from './ModalWithEvents'
 import ModalWithAuxiliarButtons from './ModalWithAuxiliarButtons'
@@ -8,26 +8,36 @@ import ModalWithIconButtons from './ModalWithIconButtons'
 
 class Examples extends React.Component {
 
+  constructor() {
+    super();
+    this.state = {theme: ''}
+  }
+
   simpleModalClick() {
     let modal = new SimpleModal();
-    modal.show();
+    modal.show(this.state.theme);
   }
 
   modalWithEventsButtonClick() {
     let modal = new ModalWithEvents();
-    modal.show();
+    modal.show(this.state.theme);
   }
 
   modalWithAuxiliarButtonClick() {
     let modal = new ModalWithAuxiliarButtons();
-    modal.show();
+    modal.show(this.state.theme);
   }
 
   modalWithIconButtonClick() {
     let modal = new ModalWithIconButtons();
-    modal.show();
+    modal.show(this.state.theme);
   }
 
+  handleChangeSelector(event) {
+    this.setState({
+      theme: event.target.value
+    });
+  }
 
   render() {
     return (
@@ -37,11 +47,14 @@ class Examples extends React.Component {
 
         <div>
           <label>Theme</label>
-          <select>
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
+          <select onChange={ this.handleChangeSelector.bind(this) }>
+            {
+              themesJson.map(theme => {
+                return (
+                  <option key={ theme.value } value={ theme.value } >{ theme.text }</option>
+                )
+              })
+            }
           </select>
         </div>
 

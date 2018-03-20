@@ -1,0 +1,82 @@
+[
+  {
+    "value": "",
+    "text": ""
+  },
+  {
+    "value": "theme-red",
+    "text": "red"
+  },
+  {
+    "value": "theme-pink",
+    "text": "pink"
+  },
+  {
+    "value": "theme-purple",
+    "text": "purple"
+  },
+  {
+    "value": "theme-deep-purple",
+    "text": "deep-purple"
+  },
+  {
+    "value": "theme-indigo",
+    "text": "indigo"
+  },
+  {
+    "value": "theme-blue",
+    "text": "blue"
+  },
+  {
+    "value": "theme-light-blue",
+    "text": "light-blue"
+  },
+  {
+    "value": "theme-cyan",
+    "text": "cyan"
+  },
+  {
+    "value": "theme-teal",
+    "text": "teal"
+  },
+  {
+    "value": "theme-green",
+    "text": "green"
+  },
+  {
+    "value": "theme-light-green",
+    "text": "light-green"
+  },
+  {
+    "value": "theme-lime",
+    "text": "lime"
+  },
+  {
+    "value": "theme-yellow",
+    "text": "yellow"
+  },
+  {
+    "value": "theme-amber",
+    "text": "amber"
+  },
+  {
+    "value": "theme-orange",
+    "text": "orange"
+  },
+  {
+    "value": "theme-deep-orange",
+    "text": "deep-orange"
+  },
+  {
+    "value": "theme-brown",
+    "text": "brown"
+  },
+  {
+    "value": "theme-grey",
+    "text": "grey"
+  },
+  {
+    "value": "theme-blue-grey",
+    "text": "blue-grey"
+  }
+]

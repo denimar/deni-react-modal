@@ -52,13 +52,13 @@ class ModalWithAuxiliarButtons extends DeniReactModal {
       <div>
         <fieldset>
           <legend>User informations</legend>
-          <label for="name">Name:</label>
+          <label htmlFor="name">Name:</label>
           <input type="text" name="name" autoFocus />
           <br />
-          <label for="email">E-mail:</label>
+          <label htmlFor="email">E-mail:</label>
           <input type="email" name="email" size="40" />
           <br />
-          <label for="address">Address:</label>
+          <label htmlFor="address">Address:</label>
           <input type="text" name="address" size="40" />
         </fieldset>
       </div>
