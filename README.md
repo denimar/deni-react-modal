@@ -61,7 +61,7 @@ Or using "setTheme" method like this:
 modal.setTheme('indigo');
 ```
 
-Available themes: 
+#### Available themes: 
 red
 pink
 purple
