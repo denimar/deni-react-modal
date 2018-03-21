@@ -1,6 +1,8 @@
 # deni-react-modal
 A cool way to show a modal using React
 
+![alt text](https://raw.githubusercontent.com/denimar/deni-react-modal/master/deni-react-modal.png)
+
 [DEMOS](https://denimar.github.io/deni-react-modal/)
 
 
