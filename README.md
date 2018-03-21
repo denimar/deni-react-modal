@@ -47,6 +47,21 @@ modal.show();
 
 ```
 
+## Theming
+
+You can use themes by passing in show method like this: 
+```javascript
+....
+modal.show('indigo');
+```
+
+Or using "setTheme" method like this: 
+```javascript
+....
+modal.setTheme('indigo');
+```
+
+
 ## Author
 
 [Denimar de Moraes](http://github.com/denimar) (denimar@gmail.com) is a full-stack developper at the Wplex, Florianópolis, Santa Catarina, Brazil.
