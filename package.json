@@ -1,6 +1,6 @@
 {
   "name": "deni-react-modal",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "author": "Denimar de Moraes <denimar@gmail.com>",
   "description": "A cool way to show a modal using React.",
   "main": "build/deni-react-modal.js",
@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --config webpack/webpack.config.js",
-    "ghpages": "./node_modules/.bin/webpack --config webpack/webpack.config.ghpages.js",    
+    "ghpages": "./node_modules/.bin/webpack --config webpack/webpack.config.ghpages.js",
     "build": "./node_modules/.bin/webpack --config webpack/webpack.config.prod.js",
     "lint": "eslint src"
   },
