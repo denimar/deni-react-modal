@@ -1,6 +1,8 @@
 # deni-react-modal
 A cool way to show a modal using React
 
+![alt text](https://raw.githubusercontent.com/denimar/deni-react-modal/master/deni-react-modal.png)
+
 [DEMOS](https://denimar.github.io/deni-react-modal/)
 
 
@@ -39,11 +41,46 @@ export default SimpleModal;
 ```javascript
 
 import SimpleModal from './SimpleModal'
-....
+...
 let modal = new SimpleModal();
 modal.show();
 
 ```
+
+## Theming
+
+You can use themes by passing in show method like this: 
+```javascript
+...
+modal.show('indigo');
+```
+
+Or using "setTheme" method like this: 
+```javascript
+...
+modal.setTheme('indigo');
+```
+
+#### Available themes: 
+* red
+* pink
+* purple
+* deep-purple
+* indigo
+* blue
+* light-blue
+* cyan
+* teal
+* green
+* light-green
+* lime
+* yellow
+* amber
+* orange
+* deep-orange
+* brown
+* grey
+* blue-grey
 
 ## Author
 
