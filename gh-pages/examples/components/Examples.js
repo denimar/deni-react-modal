@@ -1,6 +1,5 @@
 import React from 'react'
 import './Examples.scss'
-import themesJson from './themes.json'
 import SimpleModal from './SimpleModal'
 import ModalWithEvents from './ModalWithEvents'
 import ModalWithAuxiliarButtons from './ModalWithAuxiliarButtons'
@@ -15,7 +14,8 @@ class Examples extends React.Component {
 
   simpleModalClick() {
     let modal = new SimpleModal();
-    modal.show(this.state.theme);
+    modal.setTheme(this.state.theme);      
+    modal.show();
   }
 
   modalWithEventsButtonClick() {
@@ -49,15 +49,16 @@ class Examples extends React.Component {
           <label>Theme</label>
           <select onChange={ this.handleChangeSelector.bind(this) }>
             {
-              themesJson.map(theme => {
+              themes.map(theme => {
                 return (
-                  <option key={ theme.value } value={ theme.value } >{ theme.text }</option>
+                  <option key={ theme } value={ theme } >{ theme }</option>
                 )
               })
             }
           </select>
         </div>
 
+        <br />
         <br />
 
         <fieldset>
@@ -76,3 +77,5 @@ class Examples extends React.Component {
 }
 
 export default Examples;
+
+let themes = ['', 'red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green', 'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey'];
