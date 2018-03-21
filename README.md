@@ -41,7 +41,7 @@ export default SimpleModal;
 ```javascript
 
 import SimpleModal from './SimpleModal'
-....
+...
 let modal = new SimpleModal();
 modal.show();
 
@@ -51,16 +51,36 @@ modal.show();
 
 You can use themes by passing in show method like this: 
 ```javascript
-....
+...
 modal.show('indigo');
 ```
 
 Or using "setTheme" method like this: 
 ```javascript
-....
+...
 modal.setTheme('indigo');
 ```
 
+Available themes: 
+red
+pink
+purple
+deep-purple
+indigo
+blue
+light-blue
+cyan
+teal
+green
+light-green
+lime
+yellow
+amber
+orange
+deep-orange
+brown
+grey
+blue-grey
 
 ## Author
 
