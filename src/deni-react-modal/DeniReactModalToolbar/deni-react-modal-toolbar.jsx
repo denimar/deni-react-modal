@@ -53,6 +53,9 @@ class DeniReactModalToolbar extends React.Component {
          if (button.color) {
            buttonElm.style.color = button.color;
          }
+         if (button.bold) {
+           buttonElm.style.fontWeight = 'bold';
+         }
          buttonElm.addEventListener('click', () => {
            if (this._isDefaultButton(button)) {
              if (modal.confirm(modal.modalContainer, button)) {

@@ -24,12 +24,13 @@ module.exports = {
     OK: {
       value: 'ok',
       text: 'OK',
-      color: '#2FA665'//'#00bcd4'
+      color: '#006400', //'#00bcd4'
+      bold: true
     },
     CANCEL: {
       value: 'cancel',
       text: 'Cancel',
-      color: '#ff4081'
+      color: '#ff1493' //'#ff4081'
     },
     CLOSE: {
       value: 'close',
