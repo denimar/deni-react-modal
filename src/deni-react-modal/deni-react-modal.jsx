@@ -35,7 +35,7 @@ class DeniReactModal {
       this.theme = theme;
     }
 
-    return new Promise((resolve, reject) => {
+    return new Promise((resolveFn, rejectFn) => {
       //
       this.backgroundWnd = document.createElement('div');
       this.backgroundWnd.classList.add('deni-react-modal-background');
@@ -54,6 +54,8 @@ class DeniReactModal {
       //
       DeniReactModalHelper.windowResize.call(this, this.modalContainer, this.config.position);
       window.addEventListener('resize', DeniReactModalHelper.windowResize.bind(this, this.modalContainer, this.config.position));
+
+      this.executeOnClose = resolveFn;
 
       //
       setTimeout(() => {
@@ -88,6 +90,10 @@ class DeniReactModal {
 
     if (this.config.listeners.onClose) {
       this.config.listeners.onClose(this.modalContainer);
+    }
+
+    if (this.executeOnClose) {
+      this.executeOnClose(this.modalContainer);
     }
   }
 
