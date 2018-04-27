@@ -14,28 +14,28 @@ module.exports = {
     YES: {
       value: 'yes',
       text: 'Yes',
-      color: '#00bcd4'
+      color: '#276bbe'
     },
     NO: {
       value: 'no',
       text: 'No',
-      color: '#ff4081'
+      color: '#276bbe'
     },
     OK: {
       value: 'ok',
       text: 'OK',
-      color: '#006400', //'#00bcd4'
+      color: '#276bbe', //'#00bcd4'
       bold: true
     },
     CANCEL: {
       value: 'cancel',
       text: 'Cancel',
-      color: '#ff1493' //'#ff4081'
+      color: '#276bbe' //'#ff4081'
     },
     CLOSE: {
       value: 'close',
       text: 'Close',
-      //color: 'green'
+      color: '#276bbe'
     }
   },
 
