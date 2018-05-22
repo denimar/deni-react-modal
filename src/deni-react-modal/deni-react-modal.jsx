@@ -25,7 +25,7 @@ class DeniReactModal {
     return {} //inplemented by children classes
   }
 
-  confirm(modalBody, button) {
+  modalConfirm(modalBody, button) {
     return true; //inplemented by children classes
   }
 
