@@ -58,7 +58,7 @@ class DeniReactModalToolbar extends React.Component {
          }
          buttonElm.addEventListener('click', () => {
            if (this._isDefaultButton(button)) {
-             if (modal.confirm(modal.modalContainer, button)) {
+             if (modal.modalConfirm(modal.modalContainer, button)) {
                modal.close({modalBody: modal.modalContainer, button: parseInt(event.target.getAttribute('value'))});
              }
            } else {
