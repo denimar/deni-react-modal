@@ -7,6 +7,7 @@ const SOURCE_FOLDER = path.resolve(__dirname, '../gh-pages');
 module.exports = {
   mode: 'development',
   entry: SOURCE_FOLDER + '/App.jsx',
+  devtool: 'source-map',
   output: {
     path: SOURCE_FOLDER,
     filename: 'bundle.js'
